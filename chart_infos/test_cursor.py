@@ -6,7 +6,7 @@ import time
 
 
 
-SENSITIVITY = "tight"  
+SENSITIVITY = "loose"  
 
 
 SENSITIVITY_PRESETS = {

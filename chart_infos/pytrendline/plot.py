@@ -113,12 +113,16 @@ class TrendlineFigure():
     # Calculate slope and intersect using first point and last point
     m, b = np.polyfit([pt_set_x[0], pt_set_x[-1]], [pt_set_y[0], pt_set_y[-1]], 1)
 
+    # Calculate extension: approximately 1 month (30 candles for daily, adjust based on data)
+    extension_candles = 30
+
     if self.is_breakout:
       last_date_index = self.breakout_index + 0.05
       last_date_trendline_price = m * last_date_index + b
       p.x([last_date_index], [last_date_trendline_price], line_width=3, size=10, color="red", alpha=0.8)
     else:
-      last_date_index = len(candles_df) - 1
+      # Extend the line by ~1 month beyond the last candle
+      last_date_index = len(candles_df) - 1 + extension_candles
 
     tl_vals_at_x = pt_set_y
     tl_y_at_last_date = m * last_date_index + b
@@ -135,9 +139,9 @@ class TrendlineFigure():
       line_dash=self.get_trendline_plot_line_style()
     )
 
-    # Draw plot score label
+    # Draw plot label showing line equation coefficients
     if self.is_best_from_duplicate_group:
-      label_text =  "Score " + str(self.id) + " = " + str(round(self.score, 2))
+      label_text =  "Line " + str(self.id) + ": y = {:.6f}x + {:.2f} [Score: {:.2f}]".format(m, b, self.score)
       if self.is_breakout: label_text += " (breakout at {})".format(self.breakout_index)
       
       label_x_pos = last_date_index + 2
@@ -257,7 +261,8 @@ def plot_graph_bokeh(results):
   y_range_top = candles_df['Low'].min() - y_padding
   y_range_bottom = candles_df['High'].max() + y_padding
   x_range_left = -1
-  x_range_right = len(candles_df) + 10
+  # Add extra space for ~1 month extension (30 candles) plus label space
+  x_range_right = len(candles_df) + 30 + 10
 
 
   # Plot candlestick chart
