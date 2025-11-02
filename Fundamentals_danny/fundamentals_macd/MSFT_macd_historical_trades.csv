@@ -1,0 +1,5 @@
+entry_date,exit_date,entry_price,exit_price,entry_bull_score,entry_bear_score,entry_net_score,exit_bull_score,exit_bear_score,exit_net_score,return_pct,holding_days,exit_reason
+2025-04-28,2025-05-14,391.16,452.94,71.0,0.0,71.0,50.0,24.0,26.0,0.15794048471213817,16,Profit Target
+2025-06-26,2025-07-01,497.45,492.05,61.0,0.0,61.0,0.0,65.0,-65.0,-0.010855362347974625,5,Bearish Signal
+2025-07-31,2025-08-07,533.5,520.84,65.0,0.0,65.0,0.0,65.0,-65.0,-0.02373008434864099,7,Bearish Signal
+2025-09-15,2025-10-13,515.36,514.05,69.0,8.0,61.0,0.0,61.0,-61.0,-0.002541912449549944,28,Bearish Signal

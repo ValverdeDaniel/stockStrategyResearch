@@ -1,0 +1,16 @@
+{
+  "ticker": "NVDA",
+  "period": "6M",
+  "total_return": 0.21027617430599443,
+  "annualized_return": 1.3886936621072357,
+  "sharpe_ratio": 7.7240294744019025,
+  "max_drawdown": -0.06064860002982854,
+  "win_rate": 0.4,
+  "profit_factor": 4.242845768344397,
+  "avg_trade_return": 0.042405377267187176,
+  "avg_winning_trade": 0.1387049279751816,
+  "avg_losing_trade": -0.021794323204809105,
+  "total_trades": 5,
+  "avg_holding_days": 16.0,
+  "buy_and_hold_return": 0.8623195070357768
+}

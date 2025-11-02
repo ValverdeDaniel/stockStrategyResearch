@@ -1,0 +1,16 @@
+{
+  "ticker": "TSLA",
+  "period": "3M",
+  "total_return": 0.13800795893812334,
+  "annualized_return": 2.161040823075073,
+  "sharpe_ratio": 6.532055926290507,
+  "max_drawdown": -0.050615633975033464,
+  "win_rate": 0.5,
+  "profit_factor": 3.544967411339516,
+  "avg_trade_return": 0.03646816678918039,
+  "avg_winning_trade": 0.1015953777977017,
+  "avg_losing_trade": -0.02865904421934092,
+  "total_trades": 4,
+  "avg_holding_days": 10.25,
+  "buy_and_hold_return": 0.4214196762141968
+}

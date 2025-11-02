@@ -1,0 +1,16 @@
+{
+  "ticker": "AAPL",
+  "period": "6M",
+  "total_return": -0.05826230481074457,
+  "annualized_return": -0.19853757674029304,
+  "sharpe_ratio": -2.7384175667769655,
+  "max_drawdown": -0.07483150841819053,
+  "win_rate": 0.42857142857142855,
+  "profit_factor": 0.7032218944392811,
+  "avg_trade_return": -0.007573326056071028,
+  "avg_winning_trade": 0.04187202512132889,
+  "avg_losing_trade": -0.044657339439120966,
+  "total_trades": 7,
+  "avg_holding_days": 14.142857142857142,
+  "buy_and_hold_return": 0.28661844484629306
+}

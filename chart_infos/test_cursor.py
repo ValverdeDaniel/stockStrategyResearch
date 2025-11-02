@@ -42,7 +42,7 @@ print(f"  - Minimum touches required: {preset['min_points']}")
 print(f"{'='*60}\n")
 
 
-candles_df = pd.read_csv('./data/aapl_30.csv')
+candles_df = pd.read_csv('./data/amd_1year_daily.csv')
 candles_df.set_index('Idx')
 candles_df['Date'] = pd.to_datetime(candles_df['Date'])
 

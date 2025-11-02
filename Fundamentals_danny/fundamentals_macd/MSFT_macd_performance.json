@@ -1,0 +1,16 @@
+{
+  "ticker": "MSFT",
+  "period": "6M",
+  "total_return": 0.11534853640416398,
+  "annualized_return": 1.0371149175132155,
+  "sharpe_ratio": 6.467469446425087,
+  "max_drawdown": -0.036782502097733004,
+  "win_rate": 0.25,
+  "profit_factor": 4.254018824510171,
+  "avg_trade_return": 0.030203281391493152,
+  "avg_winning_trade": 0.15794048471213817,
+  "avg_losing_trade": -0.012375786382055188,
+  "total_trades": 4,
+  "avg_holding_days": 14.0,
+  "buy_and_hold_return": 0.34410471418345423
+}
