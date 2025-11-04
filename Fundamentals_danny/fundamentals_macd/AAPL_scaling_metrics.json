@@ -1,0 +1,17 @@
+{
+  "total_return": 0.0146,
+  "annualized_return": 0.0115,
+  "sharpe_ratio": 1.2948,
+  "sortino_ratio": 7.2931,
+  "max_drawdown": -0.0842,
+  "win_rate": 0.5,
+  "avg_scale_count": 0.17,
+  "avg_cost_improvement": 0.1056,
+  "max_position_utilization": 40,
+  "scaled_win_rate": 0.0,
+  "single_entry_win_rate": 0.6,
+  "return_from_scaling": 0.0018,
+  "avg_drawdown_before_profit": -0.0242,
+  "recovery_rate": 0.0,
+  "total_positions": 6
+}

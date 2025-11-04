@@ -404,8 +404,12 @@ class RobustMACDStrategy:
                 # Check each principle
                 principle_1 = row['bullish_score'] > row['entry_threshold']
                 principle_2 = row['regime'] in ['strong_trend', 'weak_trend']
-                principle_3 = row['histogram'] > 0
-                principle_4 = row['histogram_trend'] == 'Increasing'
+                # Use correct column names from MACDAnalyzer
+                hist_col = 'Histogram' if 'Histogram' in row else 'histogram'
+                hist_trend_col = 'Histogram_Trend' if 'Histogram_Trend' in row else 'histogram_trend'
+
+                principle_3 = row.get(hist_col, 0) > 0
+                principle_4 = row.get(hist_trend_col, 'Steady') == 'Increasing'
 
                 if principle_1:
                     entry_conditions.append('Score above adaptive threshold')

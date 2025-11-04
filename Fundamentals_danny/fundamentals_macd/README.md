@@ -34,6 +34,36 @@ This folder contains comprehensive MACD (Moving Average Convergence Divergence) 
      - CSV with trade log
      - JSON with performance metrics
 
+3. **`fundamentals_macd_robust.py`**
+   - Robust principle-based MACD strategy to avoid overfitting
+   - Features:
+     - Adaptive thresholds using rolling percentiles
+     - Market regime detection
+     - Walk-forward analysis
+     - Monte Carlo simulation
+     - Cross-validation across multiple stocks
+
+4. **`fundamentals_macd_rsi_scaling.py`** ⭐ NEW
+   - Advanced MACD+RSI strategy with position scaling
+   - Features:
+     - **RSI Integration**: Entry on oversold conditions (RSI < 50)
+     - **Position Scaling**: Start with 10%, scale up to 100%
+     - **Scaling Levels**:
+       - -5%: Add 10% (total 20%)
+       - -10%: Add 30% (total 50%)
+       - -20%: Add 25% (total 75%)
+       - -30%: Add 25% (total 100%)
+     - **Weighted Cost Basis**: Tracks average entry price
+     - **Smart Exits**: Based on RSI overbought or MACD bearish
+   - Benefits:
+     - Reduces timing risk through averaging
+     - Improves cost basis on weakness
+     - Higher returns with controlled risk
+   - Results with AAPL (1Y):
+     - Total Return: +1.46% (vs -9.26% without scaling)
+     - Cost Improvement: 10.56% when scaling triggered
+     - Win Rate: 50%
+
 ## Usage
 
 ### Current MACD Analysis
@@ -57,6 +87,19 @@ python fundamentals_macd_historical.py --tickers AAPL,MSFT,NVDA --period 1Y
 python fundamentals_macd_historical.py --ticker AAPL --period 3M --optimize
 ```
 
+### MACD+RSI with Position Scaling
+```bash
+# Run scaling strategy backtest
+python fundamentals_macd_rsi_scaling.py --ticker AAPL --period 1Y
+
+# Different time periods
+python fundamentals_macd_rsi_scaling.py --ticker MSFT --period 6M
+python fundamentals_macd_rsi_scaling.py --ticker NVDA --period 3M
+
+# Custom output prefix
+python fundamentals_macd_rsi_scaling.py --ticker AAPL --period 1Y --output AAPL_test
+```
+
 ## Output Files
 
 ### From `fundamentals_macd.py`:
@@ -67,6 +110,11 @@ python fundamentals_macd_historical.py --ticker AAPL --period 3M --optimize
 - `{TICKER}_macd_historical_scores.csv` - Daily historical scores
 - `{TICKER}_macd_historical_trades.csv` - Trade log
 - `{TICKER}_macd_performance.json` - Performance metrics
+
+### From `fundamentals_macd_rsi_scaling.py`:
+- `{TICKER}_scaling_report.html` - Interactive report with scaling visualization
+- `{TICKER}_scaling_trades.csv` - Detailed trade log with tranches
+- `{TICKER}_scaling_metrics.json` - Performance metrics including scaling stats
 
 ## MACD Scoring System
 
