@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD Financial Fundamentals Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .insights-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .insights-box h3 {
+            color: white;
+            margin-top: 0;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .insights-box p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .insights-box strong {
+            color: #ffd700;
+        }
+
+        .metadata {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .metadata p {
+            margin: 8px 0;
+        }
+
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .financial-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 14px;
+            text-align: right;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+
+        .financial-table th:first-child {
+            text-align: left;
+        }
+
+        .financial-table td {
+            padding: 12px 14px;
+            text-align: right;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .financial-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .financial-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .financial-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Highlight forecast rows */
+        .financial-table tr:has(.forecast-type) {
+            background-color: #e8f4fd;
+            font-style: italic;
+        }
+
+        .financial-table tr:has(.forecast-type):hover {
+            background-color: #d4ebfc;
+        }
+
+        .forecast-type {
+            color: #3498db;
+            font-weight: 600;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: 20px;
+            padding: 15px;
+            background: #fef9e7;
+            border-left: 4px solid #f39c12;
+            border-radius: 4px;
+        }
+
+        .note strong {
+            color: #e67e22;
+        }
+
+        .chart-container {
+            margin: 40px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>AMD Financial Fundamentals Analysis</h1>
+
+    <div class="metadata">
+        <p><strong>Report Generated:</strong> 2025-11-11 15:04:14</p>
+        <p><strong>Data Source:</strong> EODHD API</p>
+        <p><strong>Ticker:</strong> AMD</p>
+        <p><strong>Shares Outstanding:</strong> 1,628,041,540</p>
+    </div>
+
+    
+            <div class="insights-box">
+                <h3>Correlation Analysis Insights</h3>
+                <p><strong>Correlation (Fundamentals vs Price):</strong> 0.07</p><p><strong>Average Price/Fundamentals Ratio:</strong> -1.28x</p><p><strong>Average Fundamentals Growth:</strong> +49.0%</p><p><strong>Average Stock Price Growth:</strong> +42.3%</p><p><strong>Best Stock Performance:</strong> 2023 (+127.6%)</p><p><strong>Worst Stock Performance:</strong> 2022 (-55.0%)</p>
+            </div>
+            
+
+    <h2>Historical and Forecast Financial Metrics (Per Share)</h2>
+
+    <table border="1" class="dataframe financial-table" id="amd-financial-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Year</th>
+      <th>Type</th>
+      <th>Stock Price</th>
+      <th>Stock Price YoY %</th>
+      <th>Revenue Per Share</th>
+      <th>Revenue YoY %</th>
+      <th>Cash Flow Per Share</th>
+      <th>CF YoY %</th>
+      <th>Earnings Per Share</th>
+      <th>EPS YoY %</th>
+      <th>Median Fundamentals Growth %</th>
+      <th>Price/Fundamentals Ratio</th>
+      <th>Number of Analysts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2019</td>
+      <td>Historical</td>
+      <td>$45.86</td>
+      <td>-</td>
+      <td>$4.13</td>
+      <td>-</td>
+      <td>$0.30</td>
+      <td>-</td>
+      <td>$0.64</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>Historical</td>
+      <td>$91.71</td>
+      <td>+100.0%</td>
+      <td>$6.00</td>
+      <td>+45.0%</td>
+      <td>$0.66</td>
+      <td>+117.2%</td>
+      <td>$1.29</td>
+      <td>+101.6%</td>
+      <td>+101.6%</td>
+      <td>0.98x</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>Historical</td>
+      <td>$143.90</td>
+      <td>+56.9%</td>
+      <td>$10.09</td>
+      <td>+68.3%</td>
+      <td>$2.16</td>
+      <td>+228.8%</td>
+      <td>$2.80</td>
+      <td>+117.1%</td>
+      <td>+117.1%</td>
+      <td>0.49x</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>Historical</td>
+      <td>$64.77</td>
+      <td>-55.0%</td>
+      <td>$14.50</td>
+      <td>+43.6%</td>
+      <td>$2.19</td>
+      <td>+1.2%</td>
+      <td>$3.54</td>
+      <td>+26.4%</td>
+      <td>+26.4%</td>
+      <td>-2.08x</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td>Historical</td>
+      <td>$147.41</td>
+      <td>+127.6%</td>
+      <td>$13.93</td>
+      <td>-3.9%</td>
+      <td>$1.02</td>
+      <td>-53.2%</td>
+      <td>$2.65</td>
+      <td>-25.1%</td>
+      <td>-25.1%</td>
+      <td>-5.07x</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>Historical</td>
+      <td>$120.79</td>
+      <td>-18.1%</td>
+      <td>$15.84</td>
+      <td>+13.7%</td>
+      <td>$1.87</td>
+      <td>+82.4%</td>
+      <td>$3.32</td>
+      <td>+25.3%</td>
+      <td>+25.3%</td>
+      <td>-0.71x</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>2025</td>
+      <td class="forecast-type">Forecast</td>
+      <td>-</td>
+      <td>-</td>
+      <td>$20.84</td>
+      <td>+31.6%</td>
+      <td>$5.15</td>
+      <td>+175.7%</td>
+      <td>$3.96</td>
+      <td>+19.3%</td>
+      <td>+31.6%</td>
+      <td>-</td>
+      <td>43.0000</td>
+    </tr>
+    <tr>
+      <td>2026</td>
+      <td class="forecast-type">Forecast</td>
+      <td>-</td>
+      <td>-</td>
+      <td>$27.09</td>
+      <td>+30.0%</td>
+      <td>$8.37</td>
+      <td>+62.6%</td>
+      <td>$6.44</td>
+      <td>+62.6%</td>
+      <td>+62.6%</td>
+      <td>-</td>
+      <td>44.0000</td>
+    </tr>
+  </tbody>
+</table>
+
+    <div class="note">
+        <strong>Important Notes:</strong><br>
+        • <strong>Forecast values (2025-2026)</strong> are based on analyst consensus estimates<br>
+        • <strong>Historical data (2019-2024)</strong> sourced from EODHD fundamentals API<br>
+        • <strong>Cash Flow Per Share</strong> represents Operating Cash Flow per share<br>
+        • <strong>Forecast Cash Flow</strong> estimated using industry standard multiplier (1.3x EPS) for technology companies<br>
+        • <strong>Number of Analysts</strong> indicates the consensus strength for forecast values
+    </div>
+
+    <div class="chart-container" id="chart-section">
+        <h2>Trend Visualization</h2>
+        <div id="plotly-chart"></div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        // Prepare data for Plotly chart
+        const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+        const stockPrices = [45.86, 91.71, 143.9, 64.77, 147.41, 120.79, 'null', 'null'];
+        const revenuePerShare = [4.13441539089967, 5.9967757333759435, 10.094337027788615, 14.496558853160467, 13.930848472085055, 15.838047965287176, 20.84168969054684, 27.088094902050226];
+        const cfPerShare = [0.30281782613482944, 0.6578456222929053, 2.1627212288453035, 2.1897475662691015, 1.0239296473970805, 1.8678884569493233, 5.14904, 8.374600000000001];
+        const epsData = [0.64, 1.29, 2.8, 3.54, 2.65, 3.32, 3.9608, 6.442];
+        const types = ['Historical', 'Historical', 'Historical', 'Historical', 'Historical', 'Historical', 'Forecast', 'Forecast'];
+
+        // Split into historical and forecast
+        const historicalYears = years.filter((y, i) => types[i] === 'Historical');
+        const forecastYears = years.filter((y, i) => types[i] === 'Forecast');
+
+        const historicalPrices = stockPrices.filter((v, i) => types[i] === 'Historical');
+
+        const historicalRevenue = revenuePerShare.filter((v, i) => types[i] === 'Historical');
+        const forecastRevenue = revenuePerShare.filter((v, i) => types[i] === 'Forecast');
+
+        const historicalCF = cfPerShare.filter((v, i) => types[i] === 'Historical');
+        const forecastCF = cfPerShare.filter((v, i) => types[i] === 'Forecast');
+
+        const historicalEPS = epsData.filter((v, i) => types[i] === 'Historical');
+        const forecastEPS = epsData.filter((v, i) => types[i] === 'Forecast');
+
+        // Create traces
+        const traces = [
+            // Stock Price (on secondary y-axis)
+            {
+                x: historicalYears,
+                y: historicalPrices,
+                name: 'Stock Price',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#ff6b6b', width: 3},
+                marker: {size: 10, symbol: 'diamond'},
+                yaxis: 'y2'
+            },
+            // Historical data
+            {
+                x: historicalYears,
+                y: historicalRevenue,
+                name: 'Revenue/Share (Historical)',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#3498db', width: 2},
+                marker: {size: 8}
+            },
+            {
+                x: historicalYears,
+                y: historicalCF,
+                name: 'Cash Flow/Share (Historical)',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#2ecc71', width: 2},
+                marker: {size: 8}
+            },
+            {
+                x: historicalYears,
+                y: historicalEPS,
+                name: 'EPS (Historical)',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#e74c3c', width: 2},
+                marker: {size: 8}
+            },
+            // Forecast data
+            {
+                x: forecastYears,
+                y: forecastRevenue,
+                name: 'Revenue/Share (Forecast)',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#3498db', width: 2, dash: 'dash'},
+                marker: {size: 8, symbol: 'diamond'}
+            },
+            {
+                x: forecastYears,
+                y: forecastCF,
+                name: 'Cash Flow/Share (Forecast)',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#2ecc71', width: 2, dash: 'dash'},
+                marker: {size: 8, symbol: 'diamond'}
+            },
+            {
+                x: forecastYears,
+                y: forecastEPS,
+                name: 'EPS (Forecast)',
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: '#e74c3c', width: 2, dash: 'dash'},
+                marker: {size: 8, symbol: 'diamond'}
+            }
+        ];
+
+        const layout = {
+            title: {
+                text: 'AMD Financial Metrics & Stock Price Trend',
+                font: {size: 20}
+            },
+            xaxis: {
+                title: 'Year',
+                showgrid: true,
+                dtick: 1
+            },
+            yaxis: {
+                title: 'Value per Share ($)',
+                showgrid: true,
+                zeroline: true,
+                side: 'left'
+            },
+            yaxis2: {
+                title: 'Stock Price ($)',
+                overlaying: 'y',
+                side: 'right',
+                showgrid: false,
+                color: '#ff6b6b'
+            },
+            hovermode: 'x unified',
+            legend: {
+                x: 0.02,
+                y: 0.98,
+                bgcolor: 'rgba(255, 255, 255, 0.8)',
+                bordercolor: '#333',
+                borderwidth: 1
+            },
+            margin: {
+                l: 60,
+                r: 30,
+                t: 60,
+                b: 60
+            }
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: true,
+            displaylogo: false
+        };
+
+        // Create the plot
+        Plotly.newPlot('plotly-chart', traces, layout, config);
+    </script>
+</body>
+</html>

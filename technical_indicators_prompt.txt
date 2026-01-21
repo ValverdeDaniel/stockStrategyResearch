@@ -1,0 +1,12 @@
+I would like to create a historical price chart for the last 1 year with the following technical indicators 
+the pieces should be customizable next to the indicator in the User Interface as Inputs
+MACD- (Fast Length, Slow Length, Signal Length, Average (exponential, simple, wilders, weighted), the color of the macd line, color of signal line, color of difference
+ RSI- Length, Overbought, Oversold, Price (Close, Open, OHLC Average, High, Low, Median), color of the following plots: (rsi, overbought, oversold, fill)
+ Volume,
+ Bollinger Bands- Length, Displace, # Deviations below, # deviations above, Price (Close, Open, OHLC Average, High, Low, Median), Average  (exponential, simple, wilders, weighted)
+ Simple Moving Average - 200, (Length), displace, Price (Close, Open, OHLC Average, High, Low, Median), plot color
+ Simple Moving Average - 720, (Length), displace, Price (Close, Open, OHLC Average, High, Low, Median), plot color
+ Simple Moving Average - 50, (Length), displace, Price (Close, Open, OHLC Average, High, Low, Median), plot color
+ Exponential Moving Average, (Length), displace, Price (Close, Open, OHLC Average, High, Low, Median), plot color
+Volume Weighted Average Price
+Acceleration/Deceleration(AC)

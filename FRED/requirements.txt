@@ -1,0 +1,22 @@
+# Core FRED API
+fredapi>=0.5.1
+
+# Data manipulation
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Visualization
+plotly>=5.18.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# HTTP and utilities
+requests>=2.31.0
+python-dateutil>=2.8.2
+
+# Caching
+cachetools>=5.3.2
+
+# Optional - Dashboard capabilities
+dash>=2.14.0
+dash-bootstrap-components>=1.5.0
